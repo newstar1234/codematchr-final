@@ -3,9 +3,10 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import com.project.codematchr.entity.RoomJoinEntity;
+import com.project.codematchr.entity.pk.RoomJoinPk;
 
 @Repository
-public interface RoomJoinRepository extends JpaRepository<RoomJoinEntity, Integer> {
+public interface RoomJoinRepository extends JpaRepository<RoomJoinEntity, RoomJoinPk> {
 
     RoomJoinEntity findByUserEmail(String userEmail);
 
